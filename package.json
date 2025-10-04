@@ -7,7 +7,8 @@
     "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
-    "check": "svelte-kit sync && svelte-check"
+    "check": "svelte-kit sync && svelte-check",
+    "postinstall": "svelte-kit sync"
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "^3.2.2",
