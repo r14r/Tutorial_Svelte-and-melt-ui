@@ -287,7 +287,7 @@
         />
         <span class="radio-control" aria-hidden="true"></span>
         {option.label}
-      </label>
+      </button>
     {/each}
   </div>
 </section>
@@ -657,9 +657,19 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    border: none;
     background: rgba(15, 23, 42, 0.05);
     padding: 0.5rem 0.75rem;
     border-radius: 0.75rem;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .radio-option:focus-visible {
+    outline: 2px solid rgba(37, 99, 235, 0.6);
+    outline-offset: 2px;
   }
 
   .radio-control {
@@ -667,6 +677,11 @@
     height: 1rem;
     border-radius: 9999px;
     border: 2px solid rgba(37, 99, 235, 0.4);
+  }
+
+  :global(.radio-option[data-state='checked'] .radio-control) {
+    background: #2563eb;
+    border-color: #2563eb;
   }
 
   .select {
