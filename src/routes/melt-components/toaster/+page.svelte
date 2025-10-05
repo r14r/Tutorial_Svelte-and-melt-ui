@@ -43,12 +43,12 @@
 </button>
 <div class="toaster" use:portal>
   {#each $toasts as toast (toast.id)}
-    <div class="toast" use:content={toast}>
+    <div class="toast" use:content={toast.id}>
       <div>
-        <strong use:title={toast}>{toast.data.title}</strong>
-        <p use:description={toast}>{toast.data.description}</p>
+        <strong use:title={toast.id}>{toast.data.title}</strong>
+        <p use:description={toast.id}>{toast.data.description}</p>
       </div>
-      <button class="toast-close" use:close={toast}>×</button>
+      <button class="toast-close" use:close={toast.id}>×</button>
     </div>
   {/each}
 </div>

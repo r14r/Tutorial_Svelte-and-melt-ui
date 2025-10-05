@@ -8,7 +8,6 @@
     elements: { trigger, menu, option },
     states: { selectedLabel, open }
   } = createSelect({
-    forceVisible: true,
     positioning: {
       placement: 'bottom',
       fitViewport: true,
