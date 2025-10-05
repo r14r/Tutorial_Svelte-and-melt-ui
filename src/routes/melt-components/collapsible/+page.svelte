@@ -1,6 +1,9 @@
 <script>
   import { createCollapsible } from '@melt-ui/svelte';
 
+  export let params;
+  $: void params;
+
   const {
     elements: { root, trigger, content }
   } = createCollapsible({ defaultOpen: true });

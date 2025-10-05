@@ -1,6 +1,9 @@
 <script>
   import { createSelect } from '@melt-ui/svelte';
 
+  export let params;
+  $: void params;
+
   const {
     elements: { trigger, menu, option },
     states: { selectedLabel, open }

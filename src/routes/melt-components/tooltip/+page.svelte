@@ -1,6 +1,9 @@
 <script>
   import { createTooltip } from '@melt-ui/svelte';
 
+  export let params;
+  $: void params;
+
   const {
     elements: { trigger, content, arrow }
   } = createTooltip({

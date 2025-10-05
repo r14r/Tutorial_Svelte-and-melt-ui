@@ -1,6 +1,9 @@
 <script>
   import { createTabs } from '@melt-ui/svelte';
 
+  export let params;
+  $: void params;
+
   const {
     elements: { root, list, trigger, content }
   } = createTabs({ defaultValue: 'overview' });

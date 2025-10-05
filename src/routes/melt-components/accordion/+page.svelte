@@ -1,6 +1,9 @@
 <script>
   import { createAccordion } from '@melt-ui/svelte';
 
+  export let params;
+  $: void params;
+
   const {
     elements: { root, item, trigger, content }
   } = createAccordion({

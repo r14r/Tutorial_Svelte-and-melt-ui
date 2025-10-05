@@ -1,3 +1,9 @@
+<script>
+  export let params;
+  $: void params;
+
+</script>
+
 <section class="hero">
   <h1>Welcome to the Svelte + Melt UI tutorial project</h1>
   <p>
