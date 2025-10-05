@@ -5,10 +5,9 @@
   $: void params;
 
   const {
-    elements: { input, menu, option }
-  } = createCombobox({
-    forceVisible: true
-  });
+    elements: { input, menu, option },
+    states: { open }
+  } = createCombobox();
 
   const options = ['Accordion', 'Avatar', 'Combobox', 'Slider', 'Tabs'];
 </script>
@@ -18,11 +17,13 @@
 
 <div class="combobox">
   <input class="combobox-input" placeholder="Search components…" use:input />
-  <div class="combobox-menu" use:menu>
-    {#each options as label}
-      <div class="combobox-item" use:option={{ value: label, label }}>{label}</div>
-    {/each}
-  </div>
+  {#if $open}
+    <div class="combobox-menu" use:menu>
+      {#each options as label}
+        <div class="combobox-item" use:option={{ value: label, label }}>{label}</div>
+      {/each}
+    </div>
+  {/if}
 </div>
 
 <style>
