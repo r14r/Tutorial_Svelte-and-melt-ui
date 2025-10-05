@@ -1,3 +1,8 @@
+<script>
+  export let params;
+  $: void params;
+</script>
+
 <svelte:head>
   <title>Tutorial - Svelte & Melt UI</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />

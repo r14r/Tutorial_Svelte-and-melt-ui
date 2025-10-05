@@ -1,4 +1,7 @@
 <script>
+  export let params;
+  $: void params;
+
   const actions = [
     { id: 'new', label: 'New File', description: 'Create a document' },
     { id: 'open', label: 'Open…', description: 'Browse recent files' },

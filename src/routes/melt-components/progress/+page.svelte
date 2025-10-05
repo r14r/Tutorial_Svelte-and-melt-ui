@@ -1,6 +1,9 @@
 <script>
   import { createProgress } from '@melt-ui/svelte';
 
+  export let params;
+  $: void params;
+
   const {
     elements: { root }
   } = createProgress({ value: 45, max: 100 });

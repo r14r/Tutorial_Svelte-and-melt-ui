@@ -1,5 +1,9 @@
 <script>
   import { componentPages } from './components';
+
+  export let params;
+  $: void params;
+
   const componentLinks = componentPages.filter((item) => item.slug !== '');
 </script>
 

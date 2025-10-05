@@ -1,6 +1,9 @@
 <script>
   import { createRadioGroup } from '@melt-ui/svelte';
 
+  export let params;
+  $: void params;
+
   const {
     elements: { root, item }
   } = createRadioGroup({ defaultValue: 'full' });

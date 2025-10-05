@@ -1,6 +1,9 @@
 <script>
   import { createToggle } from '@melt-ui/svelte';
 
+  export let params;
+  $: void params;
+
   const {
     elements: { root },
     states: { pressed }

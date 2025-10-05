@@ -2,6 +2,9 @@
   import { onMount } from 'svelte';
   import { createToaster } from '@melt-ui/svelte';
 
+  export let params;
+  $: void params;
+
   const {
     elements: { content, title, description, close },
     helpers: { addToast },

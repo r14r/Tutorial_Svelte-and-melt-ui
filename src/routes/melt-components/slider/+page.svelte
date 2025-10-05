@@ -1,6 +1,9 @@
 <script>
   import { createSlider } from '@melt-ui/svelte';
 
+  export let params;
+  $: void params;
+
   const {
     elements: { root, range, thumb },
     states: { value }

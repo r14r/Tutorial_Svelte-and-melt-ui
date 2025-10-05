@@ -2,6 +2,9 @@
   import { page } from '$app/stores';
   import { componentPages } from './components';
 
+  export let params;
+  $: void params;
+
   const linkFor = (slug) => (slug ? `/melt-components/${slug}` : '/melt-components');
 </script>
 
